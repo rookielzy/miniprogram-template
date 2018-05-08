@@ -1,0 +1,60 @@
+{
+  "extEnable": true,
+  "extAppid": "wx89270208106b7603",
+  "directCommit": false,
+  "ext": {
+    "name": "wechat",
+    "attr": {
+      "host": "open.weixin.qq.com",
+      "users": [
+        "user_1",
+        "user_2"
+      ]
+    },
+    "appid": "wx89270208106b7603"
+  },
+  "pages": [
+    "pages/index/index",
+    "pages/category/category",
+    "pages/product/product",
+    "pages/subset/subset",    
+    "pages/webView/webView",        
+    "components/carousel/carousel"
+  ],
+  "extPages": {
+    "pages/index/index": {},
+    "pages/category/category": {},
+    "pages/product/product": {},
+    "pages/subset/subset": {},    
+    "pages/webView/webView": {},        
+    "components/carousel/carousel": {}
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Template Test",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页"
+    },
+    {
+      "pagePath": "pages/index/index",
+      "text": "首页"
+    },
+    {
+      "pagePath": "pages/index/index",
+      "text": "首页"
+    },
+    {
+      "pagePath": "pages/index/index",
+      "text": "首页"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}
