@@ -11,11 +11,7 @@ Component({
     myProperty2: String // 简化的定义方式
   },
   data: {
-    imgUrls: [
-      'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
-    ],
+    imgUrls: [],
     indicatorDots: false,
     autoplay: false,
     interval: 5000,
@@ -23,7 +19,9 @@ Component({
   },
   
   // 生命周期函数，可以为函数，或一个在methods段中定义的方法名
+  created: function() {},
   attached: function(){},
+  ready: function() {},
   moved: function(){},
   detached: function(){},
 
@@ -60,6 +58,9 @@ Component({
       this.setData({
         duration: e.detail.value
       })
+    },
+    test: function() {
+      console.log('test')
     }
   }
 

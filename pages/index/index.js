@@ -1,5 +1,5 @@
-//index.js
-//获取应用实例
+import { wxRender } from '../../utils/api'
+
 const app = getApp()
 
 Page({
@@ -8,6 +8,6 @@ Page({
   },
 
   onLoad: function () {
-
+    wxRender()
   }
 })
