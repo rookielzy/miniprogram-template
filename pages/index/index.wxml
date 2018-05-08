@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
-  <block wx:for="{{ renderData }}" wx:for-item="renderItem">
-    <block wx:for="{{ renderItem }}" wx:for-item="parentItem">
+  <block wx:for="{{ renderData }}" wx:for-item="renderItem" wx:key="123">
+    <block wx:for="{{ renderItem }}" wx:for-item="parentItem" wx:key="456">
       <block wx:if="{{ parentItem.type === 'carousel' }}">
         <carousel carousel="{{ parentItem.data }}" class="carousel"></carousel> 
       </block>
