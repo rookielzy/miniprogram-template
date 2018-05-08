@@ -1,10 +1,6 @@
 import { wxRequest } from './rest'
 
-function wxRender () {
-  wxRequest('GET', '/wx-render').then(res => {
-    console.log(res)
-  })
-}
+const wxRender = () => wxRequest('GET', '/wx-render')
 
 module.exports = {
   wxRender

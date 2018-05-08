@@ -3,17 +3,18 @@ Component({
   behaviors: [],
 
   properties: {
-    myProperty: { // 属性名
-      type: String, // 类型（必填），目前接受的类型包括：String, Number, Boolean, Object, Array, null（表示任意类型）
-      value: '', // 属性初始值（可选），如果未指定则会根据类型选择一个
-      observer: function(newVal, oldVal){} // 属性被改变时执行的函数（可选），也可以写成在methods段中定义的方法名字符串, 如：'_propertyChange'
+    carousel: { // 属性名
+      type: Object, // 类型（必填），目前接受的类型包括：String, Number, Boolean, Object, Array, null（表示任意类型）
+      value: null, // 属性初始值（可选），如果未指定则会根据类型选择一个
+      observer: function(newVal, oldVal){
+        console.log('something change ', newVal, oldVal, this.data)
+      }
     },
-    myProperty2: String // 简化的定义方式
   },
   data: {
-    imgUrls: [],
-    indicatorDots: false,
-    autoplay: false,
+    indicatorDots: true,
+    autoplay: true,
+    circular: true,
     interval: 5000,
     duration: 1000
   },
@@ -26,41 +27,51 @@ Component({
   detached: function(){},
 
   methods: {
-    onMyButtonTap: function(){
-      this.setData({
-        // 更新属性和数据的方法与更新页面数据的方法类似
+    _navigateToProduct: function (id) {
+      wx.navigateTo({
+        url: `/pages/product/product?id=${id}`
       })
     },
-    _myPrivateMethod: function(){
-      // 内部方法建议以下划线开头
-      this.replaceDataOnPath(['A', 0, 'B'], 'myPrivateData') // 这里将 data.A[0].B 设为 'myPrivateData'
-      this.applyDataUpdates()
-    },
-    _propertyChange: function(newVal, oldVal) {
-
-    },
-    changeIndicatorDots: function(e) {
-      this.setData({
-        indicatorDots: !this.data.indicatorDots
+    _redirectToCat: function (id) {
+      wx.redirectTo({
+        url: `/pages/category/category?id=${id}`
       })
     },
-    changeAutoplay: function(e) {
-      this.setData({
-        autoplay: !this.data.autoplay
+    _navigateToSubset: function (id) {
+      wx.navigateTo({
+        url: `/pages/subset/subset?id=${id}`
       })
     },
-    intervalChange: function(e) {
-      this.setData({
-        interval: e.detail.value
+    _navigateToH5: function (id) {
+      wx.navigateTo({
+        url: `/pages/webview/webview?id=${id}`
       })
     },
-    durationChange: function(e) {
-      this.setData({
-        duration: e.detail.value
-      })
-    },
-    test: function() {
-      console.log('test')
+    bindTapTarget: function (e) {
+      /*通过点击目标的 type 来判断跳转类型
+        type: 1 -> 分类
+              2 -> 商品
+              3 -> 商品集
+              4 -> 微页面
+      */
+      const { target_id, target_type } = e.target.dataset
+      switch (target_type) {
+        case 1:
+          this._redirectToCat(target_id)
+          break
+          
+        case 2:
+          this._navigateToProduct(target_id)
+          break
+          
+        case 3:
+          this._navigateToSubset(target_id)
+          break
+          
+        case 4:
+          this._navigateToH5(target_id)
+          break
+      }
     }
   }
 

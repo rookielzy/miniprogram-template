@@ -1,1 +1,4 @@
-/* components/carousel/carousel.wxss */
+.swiper-container image.slide-image {
+  width: 100%;
+  height: 100%;
+}

@@ -1,6 +1,10 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/product/product",
+    "pages/category/category",
+    "pages/subset/subset",
+    "pages/webView/webView",
     "components/carousel/carousel"
   ],
   "window":{

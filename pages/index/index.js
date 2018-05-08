@@ -4,10 +4,15 @@ const app = getApp()
 
 Page({
   data: {
-
+    carousel: null
   },
 
   onLoad: function () {
-    wxRender()
+    wxRender().then(res => {
+      console.log(res.data, 'carousel data')
+      this.setData({
+        carousel: res.data
+      })
+    })
   }
 })

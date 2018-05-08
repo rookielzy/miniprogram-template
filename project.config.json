@@ -13,7 +13,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.9.98",
 	"appid": "wx389fc84f3451f394",
-	"projectname": "pinfire-template",
+	"projectname": "miniprogram-template",
 	"isGameTourist": false,
 	"condition": {
 		"search": {

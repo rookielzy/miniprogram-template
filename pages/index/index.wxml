@@ -1,4 +1,4 @@
 <!--index.wxml-->
 <view class="container">
-  <carousel></carousel>
+  <carousel carousel="{{ carousel.data }}" class="carousel"></carousel>
 </view>
