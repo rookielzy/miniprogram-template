@@ -1,4 +1,10 @@
 <!--index.wxml-->
 <view class="container">
-  <carousel carousel="{{ carousel.data }}" class="carousel"></carousel>
+  <block wx:for="{{ renderData }}" wx:for-item="renderItem">
+    <block wx:for="{{ renderItem }}" wx:for-item="parentItem">
+      <block wx:if="{{ parentItem.type === 'carousel' }}">
+        <carousel carousel="{{ parentItem.data }}" class="carousel"></carousel> 
+      </block>
+    </block>
+  </block>
 </view>

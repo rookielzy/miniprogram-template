@@ -1,6 +1,6 @@
 <swiper indicator-dots="{{indicatorDots}}"
   autoplay="{{autoplay}}" interval="{{interval}}" circular="circular" duration="{{duration}}" class="swiper-container">
-  <block wx:for="{{carousel.carousels}}">
+  <block wx:for="{{carousel}}" wx:for-item="item" wx:key="{{carousel.index}}">
     <swiper-item bindtap="bindTapTarget">
       <image src="{{item.image_url}}" data-target_type="{{item.type}}" data-target_id="{{item.target}}" class="slide-image"/>
     </swiper-item>
