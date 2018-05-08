@@ -5,6 +5,9 @@
       <block wx:if="{{ parentItem.type === 'carousel' }}">
         <carousel carousel="{{ parentItem.data }}" class="carousel"></carousel> 
       </block>
+      <block wx:if="{{ parentItem.type === 'products' }}">
+        <products products="{{ parentItem.data }}" class="products"></products>
+      </block>
     </block>
   </block>
 </view>

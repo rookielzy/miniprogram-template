@@ -1,0 +1,7 @@
+<block wx:for="{{ products }}" wx:for-item="product">
+  <view class="product-container" data-product_id="{{ product.id }}" bindtap="linkToProduct">
+    <image src="{{ product.image_url }}" />
+    <text class="product_name">{{ product.name }}</text>
+    <text class="product_price">￥{{ product.price }}</text>
+  </view> 
+</block>

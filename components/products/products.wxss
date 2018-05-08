@@ -1,0 +1,17 @@
+.product-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: column;
+}
+
+.product-container image {
+  width: 220rpx;
+  height: 220rpx;
+  border-radius: 10rpx;
+}
+
+.product-container .product_name, .product-container .product_price {
+  font-size: 24rpx;
+  text-align: center;
+}

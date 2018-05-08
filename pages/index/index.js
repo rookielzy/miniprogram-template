@@ -4,7 +4,6 @@ const app = getApp()
 
 Page({
   data: {
-    carousel: null,
     renderData: null
   },
 

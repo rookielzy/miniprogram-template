@@ -5,7 +5,8 @@
     "pages/category/category",
     "pages/subset/subset",
     "pages/webView/webView",
-    "components/carousel/carousel"
+    "components/carousel/carousel",
+    "components/products/products"
   ],
   "window":{
     "backgroundTextStyle":"light",
