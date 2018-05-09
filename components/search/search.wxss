@@ -1,0 +1,15 @@
+.search-container {
+  width: 100%;
+  height: 50rpx;
+  border-radius: 50rpx;
+  border: 1px solid #ccc;
+  margin: 0 20rpx;
+  padding: 0 20rpx;
+  text-align: center;
+  line-height: 50rpx;
+}
+
+.search-container .placeholder {
+  font-size: 24rpx;
+  color: #737373;
+}

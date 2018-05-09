@@ -1,5 +1,5 @@
 {
-  "extEnable": true,
+  "extEnable": false,
   "extAppid": "wx89270208106b7603",
   "directCommit": false,
   "ext": {
@@ -20,7 +20,8 @@
     "pages/subset/subset",    
     "pages/webView/webView",        
     "components/carousel/carousel",
-    "components/products/products"    
+    "components/products/products",
+    "components/search/search" 
   ],
   "extPages": {
     "pages/index/index": {},
@@ -29,7 +30,8 @@
     "pages/subset/subset": {},    
     "pages/webView/webView": {},        
     "components/carousel/carousel": {},
-    "components/products/products": {}    
+    "components/products/products": {},
+    "components/search/search": {}
   },
   "window":{
     "backgroundTextStyle":"light",

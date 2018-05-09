@@ -2,10 +2,13 @@
 <view class="container">
   <block wx:for="{{ renderData }}" wx:for-item="renderItem" wx:key="123">
     <block wx:if="{{ renderItem.type === 'carousel' }}">
-      <carousel carousel="{{ renderItem.data }}" class="carousel"></carousel>
+      <carousel carousel="{{ renderItem.data }}" class="module_carousel"></carousel>
     </block>
     <block wx:if="{{ renderItem.type === 'products' }}">
-      <products products="{{ renderItem.data }}" class="products"></products>    
+      <products products="{{ renderItem.data }}" class="module_products"></products>    
+    </block>
+    <block wx:if="{{ renderItem.type === 'search' }}">
+      <search class="module_search"></search>
     </block>
   </block>
 </view>

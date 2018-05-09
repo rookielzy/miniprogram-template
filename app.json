@@ -5,8 +5,10 @@
     "pages/category/category",
     "pages/subset/subset",
     "pages/webView/webView",
+    "pages/search/search",
     "components/carousel/carousel",
-    "components/products/products"
+    "components/products/products",
+    "components/search/search"
   ],
   "window":{
     "backgroundTextStyle":"light",

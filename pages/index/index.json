@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "carousel": "/components/carousel/carousel",
-    "products": "/components/products/products"
+    "products": "/components/products/products",
+    "search": "/components/search/search"
   }
 }

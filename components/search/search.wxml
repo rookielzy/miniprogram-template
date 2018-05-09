@@ -1,0 +1,4 @@
+<view class="search-container" bindtap="linkToSearch">
+  <icon type="search" size="14" color="#737373"/>
+  <text class="placeholder">搜索商品</text>
+</view>
