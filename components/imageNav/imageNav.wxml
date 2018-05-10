@@ -1,0 +1,3 @@
+<view class="image-nav-container" bindtap="bindTapTarget">
+  <image src="{{ image.url }}" data-target_type="{{ image.type }}" data-target_id="{{ image.target }}" />
+</view>

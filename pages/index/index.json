@@ -3,6 +3,7 @@
     "carousel": "/components/carousel/carousel",
     "products": "/components/products/products",
     "search": "/components/search/search",
-    "store": "/components/store/store"
+    "store": "/components/store/store",
+    "image-nav": "/components/imageNav/imageNav"
   }
 }

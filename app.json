@@ -9,7 +9,8 @@
     "components/carousel/carousel",
     "components/products/products",
     "components/search/search",
-    "components/store/store"
+    "components/store/store",
+    "components/imageNav/imageNav"
   ],
   "window":{
     "backgroundTextStyle":"light",
