@@ -4,9 +4,9 @@
 
 ## 模板库结构
 
-```
+```shell
 ├── app                                         // 小程序的一些基本配置
-├── ext.json                                    // 用于开发调试使用的配置表    
+├── ext.json                                    // 用于开发调试使用的配置表
 ├── utils                                       // 基本的函数封装，配置等
 |      ├──── api.js                             // 请求的API
 |      ├──── config.js                          // 公共配置
@@ -22,7 +22,10 @@
 ├── components                                  // 组件模板目录
        ├──── carousel                           // 轮播图组件
        ├──── products                           // 商品导航组件
-       ├──── search                             // 商品收缩组件
+       ├──── search                             // 商品搜索组件
+├── styles                                      // 样式目录
+       ├──── index.wxss                         // 基本配色
+├── project.config.json                         // 小程序的项目配置
 ├── project.config.json                         // 小程序的项目配置
 ```
 
