@@ -21,7 +21,8 @@
     "pages/webView/webView",        
     "components/carousel/carousel",
     "components/products/products",
-    "components/search/search" 
+    "components/search/search",
+    "components/store/store"    
   ],
   "extPages": {
     "pages/index/index": {},
@@ -31,7 +32,8 @@
     "pages/webView/webView": {},        
     "components/carousel/carousel": {},
     "components/products/products": {},
-    "components/search/search": {}
+    "components/search/search": {},
+    "components/store/store": {}
   },
   "window":{
     "backgroundTextStyle":"light",

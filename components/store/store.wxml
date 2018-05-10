@@ -1,0 +1,9 @@
+<scroll-view class="scroll-container" scroll-x="true">
+  <view class="scroll-container">
+    <block wx:for="{{ stores }}" wx:for-item="store" wx:key="1010">
+      <view class="scroll-view-item_H" bindtap="bindTapTarget">
+        <image src="{{ store.url }}" data-target_type="{{ store.type }}" data-target_target="{{ store.id }}" />
+      </view>  
+    </block>
+  </view>
+</scroll-view>

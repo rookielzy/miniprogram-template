@@ -10,5 +10,8 @@
     <block wx:if="{{ renderItem.type === 'search' }}">
       <search class="module_search"></search>
     </block>
+    <block wx:if="{{ renderItem.type === 'store_nav' }}">
+      <store class="module_store" stores="{{ renderItem.data }}"></store>
+    </block>
   </block>
 </view>
