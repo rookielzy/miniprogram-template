@@ -1,3 +1,4 @@
+import { wxStyle } from './utils/api'
 //app.js
 App({
   onLaunch: function () {
@@ -26,8 +27,14 @@ App({
         }
       }
     })
+
+    // 获取基础色
+    wxStyle().then(res => {
+      this.baseStyle = res.data.data.type
+    })
   },
   globalData: {
     userInfo: null
-  }
+  },
+  baseStyle: ''
 })

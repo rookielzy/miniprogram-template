@@ -1,0 +1,35 @@
+/* :root {
+  --baseColor: #409EFF;
+  --success: #67C23A;
+  --warning: #E6A23C;
+  --danger: #F56C6C;
+  --info: #909399;
+  --mainText: #303133;
+  --ragularText: #606266;
+  --secondaryText: #909399;
+  --placeholderText: #C0C4CC;
+  --firstBorder: #DCDFE6;
+  --secondaryBorder: #E4E7ED;
+  --threeLevelBorder: #EBEEF5;
+  --fourLevelBorder: #F2F6FC;
+} */
+
+.base-bg__basic {
+  background-color :#409EFF;
+}
+
+.base-bg__basic_success {
+  background-color: #67C23A;
+}
+
+.base-bg__basic_warning {
+  background-color: #E6A23C;
+}
+
+.base-bg__basic_danger {
+  background-color: #F56C6C;
+}
+
+.base-bg__basic_info {
+  background-color: #909399;
+}

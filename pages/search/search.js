@@ -1,3 +1,5 @@
+const app = getApp()
+
 // pages/search/search.js
 Page({
 
@@ -5,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+
   },
 
   /**
@@ -19,7 +21,9 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    this.setData({
+      styleType: app.baseStyle
+    })
   },
 
   /**
