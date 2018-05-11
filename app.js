@@ -32,6 +32,14 @@ App({
     wxStyle().then(res => {
       this.baseStyle = res.data.data.type
     })
+
+    // 获取系统信息
+    wx.getSystemInfo({
+      success: res => {
+        this.globalData.windowHeight = res.windowHeight
+        this.globalData.pixelRatio = res.pixelRatio
+      }
+    })
   },
   globalData: {
     userInfo: null

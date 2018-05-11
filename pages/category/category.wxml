@@ -1,2 +1,84 @@
-<!--pages/category/category.wxml-->
-<text>pages/category/category.wxml</text>
+<view class="category-container">
+  <search class="search-component"></search>
+  <view class="category-main__container">
+    <view class="category-menu">
+      <scroll-view scroll-y="true">
+        <block
+          wx:for="{{ subsets }}"
+          wx:for-item="subset"
+          wx:key="{{ subset.id }}">
+          <view
+            data-id="{{ subset.id }}"
+            data-index="{{ index }}"
+            bindtap="changeSubmenu">
+            {{ subset.name }}
+          </view>
+        </block>
+        <block
+          wx:for="{{ categories }}"
+          wx:for-item="category"
+          wx:key="{{ category.id }}">
+          <view
+            data-id="{{ category.id }}"
+            data-index="{{ index + subsetsCnt }}"
+            bindtap="changeSubmenu">
+            {{ category.name }}
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+    <view class="category-submenu__container" id="category-submenu__container">
+      <block
+        wx:for="{{ subsets }}"
+        wx:for-item="subset"
+        wx:key="{{ subset.id }}"
+        data-id="{{ sbuset.id }}">
+        <view class="category-submenu" style="transform: translate3d(0, -{{yAxis}}px, 0);">
+          <scroll-view scroll-x="true">
+            <image mode="aspectFit" src="{{ subset.category_banner_image.url }}" />
+          </scroll-view>
+          <view>
+            <text>{{ subset.name }}</text>
+          </view>
+          <view class="submenu-container">
+            <block
+              wx:for="{{ subset.goodsSets }}"
+              wx:for-item="goodsSet"
+              wx:key="{{ goodsSet.id }}">
+              <view data-goodset_id="{{ goodsSet.id }}" class="submenu-item">
+                <image src="{{ goodsSet.category_logo_image.url }}" />
+                <text>{{ goodsSet.name }}</text>
+              </view>
+            </block>
+          </view>
+        </view>
+      </block>
+      <block
+        wx:for="{{ categories }}"
+        wx:for-item="category"
+        wx:key="{{ category.id }}"
+        data-id="{{ category.id }}">
+        <view class="category-submenu" style="transform: translate3d(0, -{{yAxis}}px, 0);">
+          <scroll-view scroll-x="true" wx:if="{{ category.title_image_url }}">
+            <image mode="aspectFit" src="{{ category.title_image_url }}" />
+          </scroll-view>
+          <view>
+            <text>{{ category.name }}</text>
+          </view>
+          <view class="submenu-container">
+            <block
+              wx:for="{{ category.children }}"
+              wx:for-item="child"
+              wx:key="{{ child.id }}"
+              data-id="{{ child.id }}">
+              <view data-category_id="{{ child.id }}" class="submenu-item">
+                <image src="{{ child.logo_image_url }}" />
+                <text>{{ child.name }}</text>
+              </view>
+            </block>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
