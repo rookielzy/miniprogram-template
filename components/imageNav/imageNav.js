@@ -1,4 +1,4 @@
-var tapTargetBehavior = require('../tapTargetBehavior')
+var tapTargetBehavior = require('../behavior/tapTargetBehavior')
 
 Component({
 
